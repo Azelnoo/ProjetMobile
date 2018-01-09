@@ -1,5 +1,6 @@
 {
   "name": "projetmobile",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "b1ffdf25",
+  "type": "ionic-angular",
+  "integrations": {}
 }
