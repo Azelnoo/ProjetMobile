@@ -2,5 +2,7 @@
   "name": "projetmobile",
   "app_id": "b1ffdf25",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

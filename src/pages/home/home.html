@@ -7,12 +7,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+<ion-card *ngFor="let pizza of mypizza">
+  <img src="{{pizza.imgPizza64}}"/>
+  <ion-card-content>
+    <ion-card-title>
+    {{pizza.name}}
+      </ion-card-title>
+    <p>
+      {{pizza.desc}}
+    </p>
+    <p>
+        {{pizza.price}}<ion-icon name="pricetag"></ion-icon>
+    </p>
+  </ion-card-content>
+</ion-card>
