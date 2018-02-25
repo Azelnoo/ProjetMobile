@@ -46,5 +46,13 @@ private readonly url = "http://kim.jcatania.io:3000/pizza";//"http://10.13.0.248
 
   }
 
+  panier()  {
+
+  }
+
+  addPizza()  {
+
+  }
+
 
 }

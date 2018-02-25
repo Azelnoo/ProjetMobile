@@ -2,8 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { HomePage } from '../pages/home/home';
+import { AddPizzaPage } from '../pages/add-pizza/add-pizza';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,7 +22,8 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage }
+      { title: 'Home', component: HomePage },
+      { title: 'Ajouter Pizza', component: HomePage }
     ];
 
   }

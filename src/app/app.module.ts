@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PizzaService } from '../providers/pizza-service/pizza-service';
 import { HttpClient } from '@angular/common/http';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { AddPizzaPage } from '../pages/add-pizza/add-pizza';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    AddPizzaPage,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,7 +36,8 @@ import { HttpClient } from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PizzaService,
-    HttpClient
+    HttpClient,
+    Camera
   ]
 })
 export class AppModule {}

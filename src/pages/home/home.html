@@ -3,21 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Accueil</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-card *ngFor="let pizza of mypizza">
-  <img src="{{pizza.imgPizza64}}"/>
-  <ion-card-content>
-    <ion-card-title>
-    {{pizza.name}}
-      </ion-card-title>
-    <p>
-      {{pizza.desc}}
-    </p>
-    <p>
-        {{pizza.price}}<ion-icon name="pricetag"></ion-icon>
-    </p>
+<ion-content padding>
+  <ion-card *ngFor="let pizza of mypizza">
+    <img src="{{pizza.imgPizza64}}"/>
+    <ion-card-content>
+        {{ pizza.name }}
+        <img style= "width:50%; length:50%;"src='{{ pizza.picture }}'/> <hr />
+        {{ pizza.desc }} <br />
+        Prix : <strong>{{ pizza.price }}€</strong> <br />
+        <button ion-button color="dark" (click)="panier(pizza)">Acheter</button>
+        <button ion-button color="danger" (click)="delete(pizza)">Supprimer</button>
+        <button ion-button color="safe" (click)="update(pizza)">Update</button>
   </ion-card-content>
-</ion-card>
+  </ion-card>
+</ion-content>
